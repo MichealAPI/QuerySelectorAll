@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .myElement {
+
+            width: 200px;
+            height: 200px;
+            display: flex;
+
+        }
+
+        .red-bg {
+            background-color: red;
+        }
+
+        .green-bg {
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+<!-- Populated by JS -->    
+</body>
+
+<script>
+
+    const documentBody = document.querySelector("body");
+    const rqElements = 5;
+
+    for (let i = 0; i < 5; i++) {
+        documentBody.innerHTML += `<div class="myElement green-bg">${i}</div>`;
+    }
+
+    const elements = document.querySelectorAll(".myElement");
+
+    elements.forEach((element) => {
+
+        element.addEventListener('click', (e) => {
+            e.currentTarget.classList.toggle("green-bg")
+            e.currentTarget.classList.toggle("red-bg")
+        })
+
+    })
+
+
+</script>
+
+
+</html>
