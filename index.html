@@ -12,6 +12,9 @@
             height: 200px;
             display: flex;
 
+            align-items: center;
+            justify-content: center;
+
         }
 
         .red-bg {
@@ -20,6 +23,10 @@
 
         .green-bg {
             background-color: green;
+        }
+
+        .fade {
+            transition: .3s;
         }
     </style>
 
@@ -34,7 +41,7 @@
     const rqElements = 5;
 
     for (let i = 0; i < 5; i++) {
-        documentBody.innerHTML += `<div class="myElement green-bg">${i}</div>`;
+        documentBody.innerHTML += `<div class="myElement green-bg fade">${i}</div>`;
     }
 
     const elements = document.querySelectorAll(".myElement");
